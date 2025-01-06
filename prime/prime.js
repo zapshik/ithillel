@@ -1,4 +1,4 @@
-const number = +prompt('Введіть цифру: ');
+const number = +prompt('Введіть число: ');
     if (Number.isNaN(number)) {
         console.log('Введіть коректне значення');
     } else {
@@ -7,9 +7,9 @@ const number = +prompt('Введіть цифру: ');
         } else {
             let isPrime = true;
             for (let i = 2; i <= Math.sqrt(number); i++) {
-                if (number % i === 0) { // Исправлено на i
+                if (number % i === 0) {
                     isPrime = false;
-                    break; // Можно выйти из цикла сразу, если нашли делитель
+                    break;
                 }
             }
     
