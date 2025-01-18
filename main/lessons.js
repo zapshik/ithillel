@@ -256,7 +256,7 @@ const nestedObj = {
         country: 'Ukraine',
     }
 }; */
-
+/* 
 const student = {
     name: 'Den',
     secondName: 'Mith',
@@ -353,6 +353,5 @@ newArrNew[newArrNew.length] = 3;
 newArrNew[newArrNew.length] = 4;
 
 newArrNew[2] = null; // видаллення елемента
-
-
+ */
 
