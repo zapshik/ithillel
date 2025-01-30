@@ -1675,7 +1675,7 @@ for (const notification of myNotifiations) {
 // відсутності в cache 
 // - повертати новий запис з cache
 
-function sqr(x, cache) {
+/* function sqr(x, cache) {
     let squaredValue = x * x;
 
     if (cache.has(squaredValue)) {
@@ -1695,3 +1695,74 @@ console.log(sqr(8, cache));
 
 
 console.log(cache);
+ */
+
+// Вам необхідно написати функцію-декоратор logArguments(fn), 
+// яка приймає на вхід функцію і додає можливість логувати 
+// всі аргументи, передані у функцію-аргумент.
+
+/* function loggerDecorator(fn) {
+    return function(...args) {
+        console.log(`Вызов функции ${fn.name} с аргументами: ${args}`);
+        return fn(...args); // Вызываем оригинальную функцию
+    };
+}
+
+// Обычная функция
+function add(a, b) {
+    return a + b;
+}
+
+// Оборачиваем её в декоратор
+const decoratedAdd = loggerDecorator(add);
+
+// Тестируем
+console.log(decoratedAdd(3, 5)); // Выведет лог и результат */
+
+const price = 50;
+const amount = 7;
+
+function sum(price, amount) {
+    return price * amount;
+}
+
+function sumDecorator(fn) {
+    return function (...args) {
+        console.log(`Ціна: ${args[0]}, кількість: ${args[1]}`);
+        return fn(...args);
+    }
+};
+
+const DecoratedSum = sumDecorator(sum);
+
+console.log(DecoratedSum(price, amount));
+
+// Вам необхідно написати функцію-декоратор validate(sum, validator), 
+// яка приймає на вхід функцію sum і додає можливість перевіряти аргументи, 
+// передані у функцію sum, на відповідність заданому validator 
+// (наприклад, всі аргументи мають бути додатними). 
+// Якщо аргументи не проходять перевірку, то декоратор має викидати виняток.
+
+function validate(sum, validator) {
+    return function (...args) {
+        if (!args.every(validator)) {
+            console.log('Помилка: число від/ємне');
+        }
+        return sum(...args);
+    };
+}
+
+function sum(...numbers) {
+    return numbers.reduce((acc, num) => acc + num, 0);
+}
+
+function isPositive(num) {
+    return num > 0;
+}
+
+const validatedSum = validate(sum, isPositive);
+
+console.log(validatedSum(5, 10, 15));
+console.log(validatedSum(1, 2, 3, 4));
+console.log(validatedSum(-2, 4, 5));
+
