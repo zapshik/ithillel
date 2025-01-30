@@ -1430,4 +1430,268 @@ const rectangle = {
 console.log(rectangle.area());
 console.log(rectangle.perimetr());
  */
+/* 
+function sayHello(name) {
+    return `Привет, ${name}`;
+}
 
+console.log(sayHello('Аня'));
+
+function isEven(number) {
+    return number % 2 === 0;
+};
+
+console.log(isEven(13));
+
+const array = [1, 4, 9, 90];
+const sum = array.reduce(function(acc, arr){
+    return acc + arr;
+}, 0);
+
+console.log(sum);
+*/
+
+
+// 
+/* 
+const range = {
+    from: 1,
+    to: 6,
+    [Symbol.iterator]: function() {
+        let current = this.from;
+        let last = this.to;
+
+        return {
+            next: function() {
+                if (current <= last) {
+                    return {
+                        value: current++,
+                        done: false
+                    }
+                } else {
+                    return {
+                        done: true
+                    }
+                }
+            }
+        };
+    }
+};
+
+
+for (let item of range) {
+    console.log(item);
+};
+
+const objTest = {
+    start: 1,
+    stop: 6,
+    myMethod() {
+        console.log('Hello');
+    }
+}
+
+
+objTest.myMethod();
+ */
+/* 
+const myObj = {
+    items: [2, 4, 8, 0, 11],
+}
+
+myObj[Symbol.iterator] = function() {
+    let start = 0;
+    const myItemsToIterate = this.items;
+
+    return {
+        next() {
+            if (start < myItemsToIterate.length) {
+                return {
+                    value: myItemsToIterate[start++],
+                    done: false,
+                }
+            } else {
+                return {
+                    done: true
+                };
+            }
+        }
+    }
+};
+
+
+for (let elem of myObj) {
+    console.log(elem);
+};
+
+const myObj = {
+    items: [2, 4, 8, 0, 11],
+    items2: ['2', '4', '8', '0', '11'],
+    items3: [2, '4', 8, 0, '11', null, true],
+};
+
+
+ */
+
+/* function fn1() {
+    console.log('fn1');
+    fn3();
+}
+
+function fn2() {
+    console.log('fn2');
+    fn1();
+}
+
+function fn3() {
+    console.log('fn3');
+}
+
+fn2();
+ */
+
+/* function foo() {
+
+}
+
+foo(); */
+
+/* const person = {
+    name: 'Sasha',
+    greet: function() {
+        console.log('this > ', this);
+        const self = this;
+
+        function innerFunction() {
+            console.log(self.name);
+        }
+        innerFunction();
+    }
+};
+
+person.greet();
+ */
+
+/* function decorator(fn) {
+    return function () {
+        console.log('decoration');
+
+        return fn();
+    }
+}
+ */
+/* function showMessage() {
+    console.log('Some message');
+}
+
+const decorateShowMessage = decorator(showMessage);
+
+decorateShowMessage(); */
+
+/* function decorator(fn) {
+    return function (...args) {
+        console.log(args);
+        console.log(this);
+        return fn.apply(this, args);
+    }
+}
+
+function sum(a, b) {
+    return a + b;
+}
+
+const decoratedSum = decorator(sum);
+const result = decoratedSum(8, 90);
+
+console.log(result);
+ */
+
+/* const notifications = [
+    {
+        source: 'sms',
+        text: 'Please confirm your order #33123',
+        date: 'today'
+    },
+    {
+        source: 'sms',
+        text: 'Please confirm your order #45123',
+        date: 'tomorrow'
+    },
+    {
+        source: 'email',
+        text: 'Forgot your password',
+        date: 'today'
+    },
+    {
+        source: 'viber',
+        text: 'Forgot your password',
+        date: 'today'
+    },
+]
+
+const myNotifiations = {}
+
+notifications.forEach((notification) => {
+  if (!myNotifiations[notification.source]) {
+       myNotifiations[notification.source] = []
+    }
+
+    myNotifiations[notification.source].push(notification)
+});
+
+console.log(myNotifiations);
+
+// Добавляем итератор
+myNotifiations[Symbol.iterator] = function () {
+    const flatArray = Object.values(this).flat();
+    let index = 0;
+    return {
+        next() {
+            if (index < flatArray.length) {
+                return { 
+                    value: flatArray[index++], 
+                    done: false };
+            } else {
+                return { done: true };
+            }
+        }
+    };
+};
+
+// Тестируем
+for (const notification of myNotifiations) {
+    console.log(notification);
+}
+ */
+
+
+// Написати функцію sqr, яка приймає 2 аргументи: (x, cache), 
+// де x є number і cache - зовнішній map. 
+// Функція має виконувати умови: 
+// - перевіряти, чи є в cache вже обчислений квадрат від х 
+// - повертати існуючий запис з cache в разі його наявності
+// - обчислювати квадрат від х в разі його відсутності в cache 
+// - записувати в cache обчислений квадрат від х в разі його 
+// відсутності в cache 
+// - повертати новий запис з cache
+
+function sqr(x, cache) {
+    let squaredValue = x * x;
+
+    if (cache.has(squaredValue)) {
+        return cache.get(squaredValue);
+    } else {
+        cache.set(squaredValue, squaredValue);
+        return squaredValue;
+    }
+}
+
+let cache = new Map();
+
+console.log(sqr(5, cache));
+console.log(sqr(5, cache));
+console.log(sqr(4, cache));
+console.log(sqr(8, cache));
+
+
+console.log(cache);
