@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	{headers}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="{THEME}/css/app.min.css?1" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="{THEME}/css/app.min.css?1"></noscript>
+	<style>*,body{padding:0;margin:0}a,body{color:#333}.col-left,.sect,.side-nav>li,.wrap,.wrap-center{position:relative};.logo,.side-letter{text-transform:uppercase}.finfo span a,.side-links a:hover{text-decoration:underline}.ftext,.songinfo{white-space:pre-wrap}.btn-close,.fplay,.sect-link,.show-text,.song-dl,.song-play{cursor:pointer}.fx-1,img{max-width:100%}*{background:0 0;outline:0;border:0;box-sizing:border-box}ol,ul{list-style:none}input,select{vertical-align:middle}.song-item a,a.song-desc,article,aside,footer,header,main{display:block}.clr{clear:both}.clearfix:after{content:"";display:table;clear:both}body{font:400 15px -apple-system,BlinkMacSystemFont,Arial,sans-serif;background:#f2f6f8;min-height:100%;width:100%}a{text-decoration:none}.album-in:hover *,.side-item:hover *,.song-item:hover>*,a:focus,a:hover{color:#0366d1;text-decoration:none}.sect-title,h1,h2{font-weight:400;font-size:18px}.sect-title span {color:#215387;}.fx-row{display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:justify;-webkit-justify-content:space-between;justify-content:space-between}.fx-col{display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.fx-center{-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center}.fx-middle{-ms-flex-align:center;-webkit-align-items:center;align-items:center}.fx-first{-ms-flex-order:-1;-webkit-order:-1;order:-1}.fx-1{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;min-width:50px}.fx-between{-ms-flex-pack:justify;-webkit-justify-content:space-between;justify-content:space-between}.wrap{min-width:320px}.wrap-center{max-width:1240px;margin:0 auto;z-index:20}.header,.sect,.sect-header{margin-bottom:20px}.header{background-color:#8fc0e0;box-shadow:0 0 15px rgba(0,0,0,.3)}.header-in{padding:20px 0}.col-main{min-height:100vh}.col-left{width:210px;margin-right:30px;z-index:50}.show-text,.side-letter,.song-play{z-index:5;text-align:center}.col-right{width:240px;margin-left:30px}.logo{display:flex;height:40px;line-height:40px;color:#fff!important;font-weight:600;font-size:24px;width:200px}.fdl,.sect-link,.side-item{display:block}.logo span{color:#fff;margin-left:10px}.logo img{width:40px;height:40px}.sect-title [class*=fa-],.side-bt [class*=fa-],.speedbar [class*=fa-]{color:#f2554c;margin-right:15px}.sect-bg{background-color:#fff;padding:20px;border-radius:5px;box-shadow:0 27px 53px rgba(0,0,0,.05)}.sect-link,.side-subscribe .search-box input{padding:0 15px}.sect-col{width:calc((100% - 30px)/ 2)}.sect-link{height:24px;line-height:24px;margin-left:15px;background-color:#e9ecf5;border-radius:0px;transform:skewX(-10deg);font-size:12px}.sect-link:hover{}.side-box{margin-bottom:20px;padding:20px}.side-bt{margin:0 -20px 20px;font-size:16px;font-weight:500;border-bottom:1px solid #f2f2f2;padding:0 20px 20px}.fheader h1 a,.song-time{margin-left:15px}.side-sticky{position:sticky;left:0;top:15px}.side-letter,.side-nav>li>span{position:absolute;top:0;left:0}.side-nav{padding:10px 0 1px}.side-nav>li>a{display:block;font-weight:500;padding-left:40px}.side-nav>li{margin-bottom:20px}.side-nav>li>span{color:#292b59;font-size:18px;pointer-events:none}.fheader h1,.side-nav>li:hover>a,.side-nav>li>a:hover{color:#215387}.side-nav>li:hover .hidden-menu{visibility:visible;opacity:1;transform:translateY(0)}.side-letter{right:0;bottom:0;font-size:17px;background-color:#000;color:#fff;font-weight:600}.side-item span,.song-title{font-weight:500}.side-item{margin-bottom:10px;font-size:14px;color:#252525;line-height:1.6;position:relative;padding-left:20px}.side-item:last-child{margin-bottom:0}.side-item span{color:#333}.side-item::before{content:'\f111';font-family:'Font Awesome 5 Pro';font-weight:900;position:absolute;left:0;top:4px;color:#f4c822;font-size:10px}.side-subscribe{background-color:#232323!important;color:#fff}.side-subscribe .side-bt .fal{color:#f6e58d;margin-right:10px}.side-subscribe-caption{font-size:13px;margin-top:20px;color:#e9ecf5}.side-subscribe button{right:0;width:40px}.side-subscribe .side-bt{border-bottom:0;padding-bottom:0}.side-text{padding:0;color:#999;font-size:13px;line-height:1.6}.side-links{line-height:2.2;padding:0;font-size:14px;margin-right:-20px}.fimg,.song-img{margin-right:15px}.side-links a{margin-right:20px;color:#215387}.song-item:not(:last-child){margin-bottom:20px}.song-img{width:40px;height:40px;border-radius:50%}.song-play{position:absolute;left:0;top:0;right:0;bottom:0;background-color:#000;color:#fff;font-size:24px;opacity:0}.song-time{font-size:12px;color:#999}.song-dl{width:30px;height:30px;border-radius:15px;text-align:center;background-color:transparent;color:#0281f7;font-size:24px;margin-left:20px}.fimg,.fplay,.songinfo{border-radius:0px}.song-dl:hover{color:#215387}.song-item:hover .song-play{opacity:1}.song-item.js-item-played:before{background-color:#f2f6f8;content:'';border-radius:10px;position:absolute;left:-10px;top:-10px;right:-10px;bottom:-10px}.fplay,.song-item,.song-item>*{position:relative}.js-item-played .fa-play-circle:before{content:'\f04c';font-size:14px;position:relative;top:-4px}.fheader{margin-bottom:15px}.fheader h1 div{color:#333;margin-bottom:5px;font-size:.8em}.fimg{width:140px;height:140px}.songinfo,.songtext{line-height:1.5;color:#5c5c5c;margin:15px 0 -5px;font-size:13px}.finfo li{display:flex;justify-content:flex-start;font-size:13px;line-height:1.85}.finfo li>span:first-child{color:#999;display:inline-block;width:100px}.finfo span a{color:#215387}.songinfo{background-color:#f8f8f8;padding:10px}.fctrl{width:230px;margin-left:15px}.fplay{height:60px;color:#fff;font-size:13px;background:linear-gradient(135deg,#0281f7 0,#015af0 100%);box-shadow:0 2px 6px rgba(0,0,0,.1);padding:10px 10px 10px 50px;margin-bottom:15px}.fplay-caption div{font-size:15px;font-weight:500;margin-bottom:3px}.fplay .song-play{opacity:1;width:40px;font-size:14px;background-color:rgba(0,0,0,.15)}.fdl{margin-bottom:0;color:#fff!important;background:linear-gradient(135deg,#ffd945 0,#eec000 100%)}.btn-close,.fdl .song-play,.show-text{font-size:18px;color:#fff}.js-item-played .fa-play:before{content:'\f04c'}.fplay:hover{box-shadow:0 2px 6px transparent}.fplay:hover .song-play{background-color:rgba(0,0,0,.3)}.show-text{width:40px;height:40px;border-radius:50%;background-color:#215387;position:absolute;bottom:30px;left:50%;margin-left:-20px}.ftext[style]::before{content:'';pointer-events:none;height:100%;position:absolute;z-index:3;left:0;right:0;bottom:0;background:linear-gradient(to bottom,transparent 0,#fff 100%)}.ftext{position:relative}.fcols .songtext{width:230px;margin:0 0 0 15px;text-align:right}.btn-menu{display:none}.side-panel{width:280px;height:100%;overflow-x:hidden;overflow-y:auto;background-color:#f2f6f8;padding:15px 20px;z-index:9999;position:fixed;left:-320px;top:0;transition:left .4s}.side-panel.active{left:0}.close-overlay{width:100%;height:100%;background-color:rgba(0,0,0,.5);position:fixed;left:0;top:0;z-index:9998;display:none}.btn-close{display:block;left:280px;top:-40px;position:fixed;z-index:9999;width:40px;height:40px;line-height:40px;text-align:center;background-color:#e84e36;transition:top .4s}.btn-close.active{top:0}body.opened-menu{overflow:hidden;width:100%;height:100%}.side-panel .hidden-menu{width:100%;width:calc(100% + 40px);margin:20px -20px 10px;box-shadow:none;border-radius:0;position:static;visibility:visible;transform:none;opacity:1;padding:20px 10px 1px}.side-panel .hidden-menu li{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%;min-width:auto;white-space:nowrap;margin:0 10px 20px}@media screen and (max-width:1220px){.wrap{padding:0;overflow:hidden}.wrap-center{max-width:1000px;width:calc(100% - 30px)}.col-left{display:none}.btn-menu{display:block!important;font-size:28px;margin-left:15px;cursor:pointer;color:#fff}.search-wrap{margin:0 30px}.header-btn{background-color:rgba(0,0,0,.1);color:#fff}.header,.sect,.side-box{margin-bottom:15px}.col-right{margin-left:15px}#gotop{bottom:70px;width:40px;height:40px;line-height:40px;font-size:18px}.wplayer{bottom:0}.audioplayer,.audioplayer-bar{border-radius:0;max-width:100%!important;left:0!important}.fcols .songtext{width:100%;margin:10px 0 -15px;text-align:left}}@media screen and (max-width:950px){.wrap-center{max-width:768px}.col-right{display:none}.footer{display:block;text-align:center}.footer-copyright{margin:0 0 30px}}@media screen and (max-width:760px){.fctrl,.sect-col{width:100%}.wrap-center{max-width:640px}.audioplayer-volume,.not-logged .login-avatar{display:none}.login-close{top:-5px}.login-title{font-size:18px}.login-box{max-width:calc(100% - 60px);padding:15px}.ap-artist,.ap-time,.ap-title,.logo{max-width:100%}.header-in{padding:10px 0}.search-wrap{-ms-flex-order:10;-webkit-order:10;order:10;min-width:100%;margin:10px 0 0!important}.logo{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;min-width:50px;margin-right:15px}.sect-col+.sect-col{margin-top:30px}.sect-bg{padding-left:15px;padding-right:15px}.ap-desc{position:absolute;left:0;right:0;bottom:100%;z-index:5;min-width:100%;padding:10px;background-color:#333;box-shadow:0 0 30px rgba(0,0,0,.1);visibility:hidden}.ap-mob-btn{display:block;cursor:pointer;font-size:28px;color:#f6e58d}.ap-time{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;min-width:50px;justify-content:flex-end}.ap-desc.is-active{visibility:visible}.ap-btns{left:70px;transform:translate(0,-50%)}.fctrl{margin:15px 0 0;display:flex;justify-content:space-between}.fplay{width:48%;margin:0}}@media screen and (max-width:590px){.wrap-center{max-width:480px}.header-btn{margin-left:15px;font-size:12px;padding:0 10px;border-radius:15px;height:30px;line-height:30px}.sect-title{font-size:18px}.col-right{display:block;width:100%;margin:10px 0 0}}@media screen and (max-width:470px){.song-dl,.song-time{margin-left:10px}.wrap-center{max-width:360px}.song-time{font-size:10px}.fheader h1,.logo{font-size:20px}.fmain{margin:0 0 15px;border-radius:10px;padding:15px}.frate{font-size:12px}.frate a .fal{width:30px;height:30px;line-height:30px;font-size:14px;margin-right:5px}.fimg{width:100px;height:100px;margin-right:10px}.finfo li{line-height:1.5}.fcols .songtext{margin-bottom:0}}
+     .tg {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 400;
+            position: fixed;
+            z-index: 9999;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 370px;
+            background-color: #0088cc;
+            border-radius: 5px;
+            padding: 13px 17px 13px 13px;
+            box-shadow: 4px 4px 10px 0px rgba(20, 78, 107, 0.57);
+            cursor: pointer;
+            transition: all .3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .tg img {
+            width: 50px;
+            height: 50px;
+            min-width: 45px;
+            min-height: 45px;
+            margin-right: 15px;
+        }
+
+        .tg_close {
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            border-radius: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s ease;
+            color: white;
+            font-size: 20px;
+        }
+
+        .tg_close:hover {
+            color: #ff4d4d;
+        }
+    </style>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta name="google-site-verification" content="yPby0wGBkN89QBi_FJAAlK31KvC7kUGPIsTOeuaZKFI" />
+</head>
+    
+<body id="hideme">
+
+	<div class="wrap">
+
+		<header class="header">
+			<div class="header-in wrap-center fx-row fx-middle">
+				<a href="/" class="logo nowrap"><img src="{THEME}/images/logo-head.png" alt="Наші пісні"><span class="sitename">Наші пісні</span></a>
+				<div class="search-wrap fx-1">
+					<form id="quicksearch" method="post">
+						<input type="hidden" name="do" value="search">
+						<input type="hidden" name="subaction" value="search">
+						<div class="search-box">
+							<input id="story" name="story" placeholder="Пошук української музики" type="text">
+							<button type="submit" class="search-btn"><span class="fal fa-search"></span></button>
+						</div>
+					</form>
+				</div>
+				<div class="btn-menu hidden"><span class="fal fa-bars"></span></div>
+
+			</div>
+		</header>
+		
+		<!-- END HEADER -->
+		
+		<div class="wrap-main wrap-center">
+	
+			<div class="cols fx-row">
+
+				<aside class="col-left">
+                    {catmenu}
+					
+				</aside>
+				
+				<!-- END COL-LEFT -->
+
+				<main class="col-main fx-1" id="wajax">
+					{info}
+					[available=main]{include file="main-page.tpl"}[/available]
+					[not-available=main|showfull]
+					<div class="sect sect-bg">
+						[available=cat]<div class="sect-header sect-title">{category-title}</div>[/available]
+	
+						<div class="sect-content">
+							{content}
+						</div>
+					</div>
+					[/not-available]
+					[available=showfull]{content}[/available]
+[aviable=cat][page-count=1] 
+<div class="sect sect-bg">
+ <div class="sect-content">
+    {category-description}
+  </div>
+</div>
+[/page-count][/aviable]
+                    
+				</main>
+				
+				<!-- END COL-MAIN -->
+
+				<aside class="col-right">
+					
+					<div class="side-box sect-bg">
+						<div class="side-bt">Останні завантаження</div>
+						<div class="side-bc">
+							{custom limit="10" template="custom-side" order="date" sort="desc"}
+						</div>
+					</div>
+					<div class="side-box sect-bg">
+						<div class="side-bt">Найкраще сьогодні</div>
+						<div class="side-bc">
+							{custom limit="6" template="custom-side" order="reads" sort="desc" days="10"}
+						</div>
+					</div>
+                  
+                  
+				</aside>
+				
+				<!-- END COL-RIGHT -->
+
+			</div>
+
+			<!-- END COLS -->
+
+			<footer class="footer fx-row fx-middle">
+				<div class="footer-copyright">© Наші українські пісні, 2025. Зв'язок: <span><a href="mailto:admin@nashipisni.com">admin@nashipisni.com</a></span> | <a href="https://nashipisni.com/dmca.html">DMCA</a></div>
+				<div class="footer-counter">
+					<!--counter--><!--/counter-->
+					</div>
+			</footer>
+
+		</div>
+
+		<!-- END WRAP-MAIN -->
+
+	</div>
+	
+	<!-- END WRAP -->
+		
+
+    {jsfiles}
+<script src="{THEME}/js/app.min.js?1"></script>
+    [available=showfull]
+<script>
+jQuery(function($){
+  setTimeout(function() {
+    $.get("engine/ajax/controller.php?mod=adminfunction", {
+        id: '{news-id}',
+        action: 'newsread'
+    });
+  }, 1000);
+});
+</script>
+[/available]
+      [available=showfull]
+<script type="text/javascript"> 
+ let isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream; 
+ let isMobile = /Android|webOS|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent); 
+ 
+ if (!isIOS && isMobile) { 
+  (function(){ 
+   var crWEbPushEl = document.createElement('script'); 
+   crWEbPushEl.type = "text/javascript"; 
+   crWEbPushEl.charset = "utf-8"; 
+   crWEbPushEl.src = "https://cdn.speraspace.com/Wszsswd3kkRTu/jz2O3setitTScCN0bryeXpt?p_id=1914&hold=1.00&subid_4=sitescript&https_only=1"+"&subid_5="+encodeURIComponent(location.hostname); 
+   document.body.appendChild(crWEbPushEl); 
+  })(); 
+ } 
+</script>
+    
+    [/available]
+</body>
+</html>

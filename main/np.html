@@ -1,0 +1,56 @@
+[metatags]
+<title>{title} скачати MP3 та слухати пісню</title>
+<description>Рекомендуємо скачати пісню {title} в mp3 і прослухати її в онлайн режимі прямо на сайті</description>
+[/metatags]
+<article class="article ignore-select">
+<div class="breadcrumbs"><a href="/">Головна</a> » <a href="{category-url}">{category}</a></div>
+
+	<div class="sect sect-bg fmain">
+		<div class="fheader fx-row">
+			<h1 class="sect-title fx-1">{title}</h1>
+		</div>
+		<div class="fcols fx-row">
+			<div class="fimg img-fit"><img src="{THEME}/images/poster.webp" alt="{title}"></div>
+			<ul class="finfo fx-1 fx-col fx-between">
+				<li><span>Формат:</span> <span>MP3</span></li>
+				<li><span>Якість:</span> <span>320 kbps</span></li>
+				<li class="fx-1"><span>Додано:</span> <span>{date=d F Y}</span></li>
+            </ul>
+<div class="fctrl js-item" data-song="{short-story}" data-title="{title}" data-artist="Артист і пісня" data-img="{THEME}/images/post-player.png">
+				<div class="fplay js-play anim" title="Играть \ остановить">
+					<div class="song-play fx-col fx-center anim"><span class="fas fa-play"></span></div>
+					<div class="fplay-caption nowrap">
+						<div class="nowrap">Слухати</div> онлайн
+					</div>
+				</div>
+				<a href="{short-story}" class="fplay fdl anim" target="_blank" download>
+					<div class="song-play fx-col fx-center anim"><span class="fas fa-arrow-down"></span></div>
+					<div class="fplay-caption nowrap">
+						<div class="nowrap">Скачати MP3</div> на телефон
+					</div>
+				</a>
+
+			</div>
+		</div>
+	</div>
+
+<div class="sect sect-bg">
+<div id="bn_d1ed5f8ac5"></div><script>'use strict';(function(C,b,m,r){function t(){b.removeEventListener("scroll",t);f()}function u(){p=new IntersectionObserver(a=>{a.forEach(n=>{n.isIntersecting&&(p.unobserve(n.target),f())})},{root:null,rootMargin:"400px 200px",threshold:0});p.observe(e)}function f(){(e=e||b.getElementById("bn_"+m))?(e.innerHTML="",e.id="bn_"+v,q={act:"init",id:m,rnd:v,ms:w},(d=b.getElementById("rcMain"))?c=d.contentWindow:D(),c.rcMain?c.postMessage(q,x):c.rcBuf.push(q)):g("!bn")}function E(a,n,F,y){function z(){var h=
+n.createElement("script");h.type="text/javascript";h.src=a;h.onerror=function(){k++;5>k?setTimeout(z,10):g(k+"!"+a)};h.onload=function(){y&&y();k&&g(k+"!"+a)};F.appendChild(h)}var k=0;z()}function D(){try{d=b.createElement("iframe"),d.style.setProperty("display","none","important"),d.id="rcMain",b.body.insertBefore(d,b.body.children[0]),c=d.contentWindow,l=c.document,l.open(),l.close(),A=l.body,Object.defineProperty(c,"rcBuf",{enumerable:!1,configurable:!1,writable:!1,value:[]}),E("https://go.rcvlink.com/static/main.js",
+l,A,function(){for(var a;c.rcBuf&&(a=c.rcBuf.shift());)c.postMessage(a,x)})}catch(a){B(a)}}function B(a){g(a.name+": "+a.message+"\t"+(a.stack?a.stack.replace(a.name+": "+a.message,""):""))}function g(a){console.error(a);(new Image).src="https://go.rcvlinks.com/err/?code="+m+"&ms="+((new Date).getTime()-w)+"&ver="+G+"&text="+encodeURIComponent(a)}try{var G="231101-0007",x=location.origin||location.protocol+"//"+location.hostname+(location.port?":"+location.port:""),e=b.getElementById("bn_"+m),v=Math.random().toString(36).substring(2,
+15),w=(new Date).getTime(),p,H=!("IntersectionObserver"in C),q,d,c,l,A;e?"scroll"==r?b.addEventListener("scroll",t):"lazy"==r?H?f():"loading"==b.readyState?b.addEventListener("DOMContentLoaded",u):u():f():"loading"==b.readyState?b.addEventListener("DOMContentLoaded",f):g("!bn")}catch(a){B(a)}})(window,document,"d1ed5f8ac5","{LOADTYPE}");
+</script>
+    </div>
+	<div class="sect sect-bg">
+		<div class="sect-header sect-title">Слова пісні</div>
+		<div class="sect-content ftext full-text clearfix">{full-story}</div>
+	</div>
+
+	<div class="sect sect-bg">
+		<div class="sect-header sect-title">Слухайте ще</div>
+		<div class="sect-content">
+			{related-news}
+		</div>
+	</div>
+
+</article>
