@@ -191,7 +191,7 @@ console.log(date); */
 
 // DZ 14
 
-function Building(street, floars = 10, purpose = 'service') {
+/* function Building(street, floars = 10, purpose = 'service') {
     this.street = street;
     this.floars = floars;
     this.purpose = purpose;
@@ -235,5 +235,32 @@ Building.prototype.changeColor = function(newColor) {
 
 build.changeColor('fuck');
 
-console.log(build.color);
+console.log(build.color); */
+
+/* function Cat(breed, color, name) {
+    this.breed = breed;
+    this.color = color;
+    this.name = name;
+    this.sayMeow = function(){
+        alert('Say meow');
+    };
+}
+
+const newCat = new Cat('Cat', 'red', 'Tom');
+console.log(newCat);
+
+class CatClass {
+    constructor(breed, color, name) {
+        this.breed = breed;
+        this.color = color;
+        this.name = name;
+    }
+
+    sayMeow() {
+        alert('Say Meow');
+    };
+}
+
+const newCat2 = new CatClass('Cat', 'red', 'Tom');
+console.log(newCat2); */
 
